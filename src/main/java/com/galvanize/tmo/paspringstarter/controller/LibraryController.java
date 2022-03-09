@@ -39,13 +39,8 @@ public class LibraryController {
 
     @GetMapping("/books")
     public ResponseEntity<BookDto> getBooks() {
-        try {
-            BookDto bookDto = libraryService.getAllBooks();
-            return ResponseEntity.status(HttpStatus.OK).body(bookDto);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return null;
+        BookDto bookDto = libraryService.getAllBooks();
+        return ResponseEntity.status(HttpStatus.OK).body(bookDto);
     }
 
     @DeleteMapping("/books")

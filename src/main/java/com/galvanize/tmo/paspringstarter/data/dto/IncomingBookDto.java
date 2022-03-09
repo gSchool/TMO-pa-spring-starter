@@ -8,18 +8,6 @@ import javax.validation.constraints.NotEmpty;
 
 @Data
 public class IncomingBookDto {
-    public String getAuthor() {
-        return author;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public int getYearPublished() {
-        return yearPublished;
-    }
-
     @JsonProperty(required = true)
     @NotEmpty
     @NotBlank
@@ -34,4 +22,16 @@ public class IncomingBookDto {
     @NotBlank
     @NotEmpty
     private int yearPublished;
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public int getYearPublished() {
+        return yearPublished;
+    }
 }
